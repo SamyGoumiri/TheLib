@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .primary { fill: #7c4dff; }
+        .secondary { fill: #b388ff; }
+    </style>
+    <path class="primary" d="M12,8 L4,8 C2.9,8 2,8.9 2,10 L2,14 C2,15.1 2.9,16 4,16 L12,16 C13.1,16 14,15.1 14,14 L14,10 C14,8.9 13.1,8 12,8 Z"/>
+    <path class="secondary" d="M28,16 L20,16 C18.9,16 18,16.9 18,18 L18,22 C18,23.1 18.9,24 20,24 L28,24 C29.1,24 30,23.1 30,22 L30,18 C30,16.9 29.1,16 28,16 Z"/>
+    <path class="primary" d="M18,17 L14,15"/>
+</svg>

@@ -371,3 +371,44 @@ tr:hover td {
         transform: translateY(0);
     }
 }
+
+/* Supprimer ces styles s'ils existent */
+.header-title {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo-container:hover {
+    opacity: 0.9;
+}
+
+.logo-container h2 {
+    margin: 0;
+}
+
+.site-logo {
+    width: 32px;
+    height: 32px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
