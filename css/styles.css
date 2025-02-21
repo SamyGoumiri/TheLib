@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #7c4dff;    /* Violet principal */
-    --hover-color: #9575ff;      /* Violet plus clair au survol */
-    --bg-dark: #121212;          /* Fond noir profond */
-    --bg-darker: #1f1f1f;        /* Noir pour les éléments */
-    --text-light: #e0e0e0;       /* Texte clair */
-    --accent-gradient: linear-gradient(45deg, #7c4dff, #b388ff); /* Gradient violet */
+    --primary-color: #7c4dff;
+    --hover-color: #9575ff;
+    --bg-dark: #121212;
+    --bg-darker: #1f1f1f;
+    --text-light: #e0e0e0;
+    --accent-gradient: linear-gradient(45deg, #7c4dff, #b388ff);
 }
 
 :focus {
@@ -67,6 +67,7 @@ body {
     margin: 5px 0;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .sidebar ul li a:before {
@@ -92,7 +93,6 @@ body {
     flex: 1;
     padding: 20px;
     margin-left: 220px;
-    animation: fadeIn 0.5s ease-in-out;
     opacity: 0;
     animation: fadeSlideIn 0.5s ease forwards;
 }
@@ -161,10 +161,9 @@ tr:hover {
 }
 
 tr:hover td {
-    background-color: rgba(124, 77, 255, 0.1); /* Violet transparent */
+    background-color: rgba(124, 77, 255, 0.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -175,14 +174,22 @@ tr:hover td {
     .content {
         margin-left: 0;
     }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }
 
-/* Search Bar */
 .search-container {
     margin: 20px 0;
     position: relative;
     background: var(--bg-darker);
-    padding: 12px;  /* Réduit pour mieux contenir la barre */
+    padding: 12px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     max-width: 600px;
@@ -204,7 +211,7 @@ tr:hover td {
 
 .search-input {
     width: 100%;
-    padding: 10px 15px 10px 40px; /* Ajusté pour aligner avec l'icône */
+    padding: 10px 15px 10px 40px;
     border: none;
     border-radius: 4px;
     background: #333;
@@ -214,7 +221,6 @@ tr:hover td {
     margin: 0;
 }
 
-/* Tags */
 .tag {
     display: inline-block;
     padding: 4px 8px;
@@ -225,7 +231,6 @@ tr:hover td {
     font-size: 0.8em;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -254,6 +259,7 @@ tr:hover td {
     gap: 8px;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .download-link:hover {
@@ -284,7 +290,6 @@ tr:hover td {
     font-size: 0.9em;
 }
 
-/* Settings Styles */
 .settings-section {
     background: var(--bg-darker);
     padding: 20px;
@@ -317,7 +322,6 @@ tr:hover td {
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 
-/* Card Grid Layout */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -382,7 +386,6 @@ tr:hover td {
     }
 }
 
-/* Supprimer ces styles s'ils existent */
 .header-title {
     display: none;
 }
@@ -437,13 +440,17 @@ tr:hover td {
     }
 }
 
-/* Supprimer tout le bloc Auth Buttons */
 .auth-buttons,
 .auth-btn {
     display: none;
+    will-change: transform;
 }
 
-/* Supprimer la section footer */
 .footer {
     display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    }
 }
