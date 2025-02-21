@@ -1,18 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: #1f1f1f;
     padding: 15px;
+    height: 100vh;
+    position: fixed;
 }
 
 .sidebar h2 {
     text-align: center;
+    color: #ff9800;
 }
 
 .sidebar ul {
@@ -26,21 +31,30 @@ body {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #e0e0e0;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333;
 }
 
 .content {
     flex: 1;
     padding: 20px;
+    margin-left: 220px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #333;
 }
 
 th, td {
@@ -49,12 +63,13 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #333;
+    color: #ff9800;
 }
 
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -63,7 +78,7 @@ th {
 }
 
 .footer a {
-    color: #f4f4f4;
+    color: #ff9800;
     text-decoration: none;
 }
 
