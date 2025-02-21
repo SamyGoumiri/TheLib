@@ -162,6 +162,15 @@ tr:hover {
 /* Search Bar */
 .search-container {
     margin: 20px 0;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
 }
 
 .search-input {
@@ -173,6 +182,7 @@ tr:hover {
     color: #e0e0e0;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding-left: 35px;
 }
 
 .search-input:focus {
@@ -224,6 +234,35 @@ tr:hover {
     background: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Settings Styles */
+.settings-section {
+    background: var(--bg-darker);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.settings-section h2 {
+    color: var(--primary-color);
+    margin: 20px 0 10px;
+}
+
+.settings-select {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.settings-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
 }
 
 @keyframes fadeIn {
