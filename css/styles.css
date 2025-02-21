@@ -80,6 +80,8 @@ body {
     padding: 20px;
     margin-left: 220px;
     animation: fadeIn 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeSlideIn 0.5s ease forwards;
 }
 
 h1 {
@@ -106,6 +108,8 @@ table {
     margin-top: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: slideUp 0.5s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 table, th, td {
@@ -120,11 +124,23 @@ th, td {
 th {
     background-color: #333;
     color: #ff9800;
+    background: linear-gradient(45deg, var(--bg-darker), #333);
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    transition: background-color 0.2s ease;
 }
 
 tr:hover {
     background-color: #2a2a2a;
     transition: background-color 0.3s ease;
+}
+
+tr:hover td {
+    background-color: rgba(255, 152, 0, 0.1);
 }
 
 .footer {
@@ -163,6 +179,10 @@ tr:hover {
 .search-container {
     margin: 20px 0;
     position: relative;
+    background: var(--bg-darker);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .search-icon {
@@ -183,6 +203,7 @@ tr:hover {
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding-left: 35px;
+    font-size: 1.1em;
 }
 
 .search-input:focus {
@@ -228,6 +249,8 @@ tr:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
 .download-link:hover {
@@ -236,12 +259,32 @@ tr:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.download-link::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+    opacity: 0;
+}
+
+.download-link:hover::after {
+    transform: rotate(45deg) translate(0, 0);
+    opacity: 1;
+}
+
 /* Settings Styles */
 .settings-section {
     background: var(--bg-darker);
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .settings-section h2 {
@@ -258,11 +301,51 @@ tr:hover {
     border-radius: 4px;
     margin: 10px 0;
     cursor: pointer;
+    background: rgba(51,51,51,0.8);
+    backdrop-filter: blur(5px);
 }
 
 .settings-select:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background: var(--bg-darker);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-header i {
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+.card-title {
+    margin: 0;
+    color: var(--text-light);
 }
 
 @keyframes fadeIn {
@@ -278,5 +361,16 @@ tr:hover {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
