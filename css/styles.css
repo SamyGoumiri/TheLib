@@ -154,25 +154,6 @@ tr:hover td {
     background-color: rgba(124, 77, 255, 0.1); /* Violet transparent */
 }
 
-.footer {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.footer a {
-    color: #ff9800;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
