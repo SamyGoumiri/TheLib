@@ -374,30 +374,39 @@ tr:hover td {
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 30px;
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
 }
 
 .logo-container:hover {
-    opacity: 0.8;
+    background: rgba(124, 77, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .logo-container h2 {
+    display: block;
     margin: 0;
     color: var(--primary-color);
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
 }
 
 .site-logo {
     width: 32px;
     height: 32px;
     animation: pulse 2s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 }
 
 @keyframes pulse {
