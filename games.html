@@ -30,20 +30,24 @@
                    placeholder="Search for games..." onkeyup="searchItems()">
         </div>
 
-        <div class="card-grid">
-            <div class="card">
-                <div class="card-header">
-                    <i class="fas fa-gamepad"></i>
-                    <h3 class="card-title">Game 1</h3>
-                </div>
-                <p><span class="tag">Action</span></p>
-                <p>Size: 50GB</p>
-                <a href="#" class="download-link">
-                    <i class="fas fa-external-link-alt"></i> Download
-                </a>
-            </div>
-            <!-- Add more game cards as needed -->
-        </div>
+        <table>
+            <tr>
+                <th>Game</th>
+                <th>Category</th>
+                <th>Size</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Game 1</td>
+                <td><span class="tag">Action</span></td>
+                <td>50GB</td>
+                <td>
+                    <a href="#" class="download-link">
+                        <i class="fas fa-external-link-alt"></i> Download
+                    </a>
+                </td>
+            </tr>
+        </table>
     </div>
     <div class="footer">
         <p>&copy; 2025 Samy's Library - All rights reserved</p>
