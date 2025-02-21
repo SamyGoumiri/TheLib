@@ -7,6 +7,22 @@
     --accent-gradient: linear-gradient(45deg, #7c4dff, #b388ff); /* Gradient violet */
 }
 
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -419,4 +435,27 @@ tr:hover td {
     100% {
         transform: scale(1);
     }
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.auth-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-light);
+    background: var(--bg-darker);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    background: var(--primary-color);
+    color: white;
 }

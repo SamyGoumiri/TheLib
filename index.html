@@ -21,10 +21,29 @@
             <li><a href="streaming.html">Streaming</a></li>
             <li><a href="settings.html">Settings</a></li>
         </ul>
+        <div class="auth-buttons">
+            <a href="login.html" id="loginBtn" class="auth-btn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+            <a href="#" id="logoutBtn" class="auth-btn" style="display: none;">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
     </div>
     <div class="content">
         <h1><i class="fas fa-home"></i> Welcome to THE LIB</h1>
         <p>Your ultimate repository for games, software, and streaming resources.</p>
     </div>
+    <script src="js/auth.js" type="module"></script>
+    <script>
+        // Vérifier si l'utilisateur est connecté
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = sessionStorage.getItem('currentUser');
+            if (user) {
+                document.getElementById('loginBtn').style.display = 'none';
+                document.getElementById('logoutBtn').style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
