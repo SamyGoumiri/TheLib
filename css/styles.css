@@ -1,13 +1,14 @@
 :root {
-    --primary-color: #ff9800;
-    --hover-color: #ffa726;
-    --bg-dark: #121212;
-    --bg-darker: #1f1f1f;
-    --text-light: #e0e0e0;
+    --primary-color: #00bcd4;  /* Cyan moderne */
+    --hover-color: #26c6da;    /* Cyan plus clair au survol */
+    --bg-dark: #121212;        /* Fond noir profond */
+    --bg-darker: #1f1f1f;      /* Noir pour les éléments */
+    --text-light: #e0e0e0;     /* Texte clair */
+    --accent-gradient: linear-gradient(45deg, #00bcd4, #1e88e5); /* Gradient bleu */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -29,8 +30,10 @@ body {
 
 .sidebar h2 {
     text-align: center;
-    color: #ff9800;
-    font-size: 1.8em;
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: -1px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
@@ -89,6 +92,8 @@ h1 {
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 h1:after {
@@ -100,6 +105,12 @@ h1:after {
     height: 4px;
     background: var(--primary-color);
     border-radius: 2px;
+}
+
+.content h1 i {
+    margin-right: 12px;
+    font-size: 0.9em;
+    vertical-align: middle;
 }
 
 table {
@@ -123,7 +134,7 @@ th, td {
 
 th {
     background-color: #333;
-    color: #ff9800;
+    color: var(--primary-color);
     background: linear-gradient(45deg, var(--bg-darker), #333);
     font-size: 1.1em;
     text-transform: uppercase;
@@ -183,35 +194,31 @@ tr:hover td {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 600px; /* Nouvelle taille maximum */
-    margin-left: auto;  /* Centrer la barre */
-    margin-right: auto; /* Centrer la barre */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
 }
 
 .search-icon {
     position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 25px;
     color: var(--primary-color);
+    font-size: 1.2em;
+    z-index: 1;
 }
 
 .search-input {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 40px); /* Ajusté pour tenir compte du padding */
+    padding: 12px 20px 12px 45px;
     border: none;
     border-radius: 4px;
     background: #333;
     color: #e0e0e0;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    padding-left: 35px;
     font-size: 1.1em;
-}
-
-.search-input:focus {
-    outline: none;
-    box-shadow: 0 2px 10px rgba(255,152,0,0.3);
+    margin: 0;
 }
 
 /* Tags */
@@ -221,7 +228,7 @@ tr:hover td {
     margin: 2px;
     border-radius: 4px;
     background: #333;
-    color: #ff9800;
+    color: var(--primary-color);
     font-size: 0.8em;
 }
 
@@ -240,12 +247,12 @@ tr:hover td {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff9800;
+    background: var(--primary-color);
 }
 
 .download-link {
     padding: 8px 15px;
-    background: var(--primary-color);
+    background: var(--accent-gradient);
     color: var(--bg-dark);
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -278,6 +285,10 @@ tr:hover td {
 .download-link:hover::after {
     transform: rotate(45deg) translate(0, 0);
     opacity: 1;
+}
+
+.download-link i {
+    font-size: 0.9em;
 }
 
 /* Settings Styles */
