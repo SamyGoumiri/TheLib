@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games - My Links Repository</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="sidebar">
@@ -19,21 +20,38 @@
         </ul>
     </div>
     <div class="content">
-        <h1>Games</h1>
+        <h1><i class="fas fa-gamepad"></i> Games</h1>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" 
+                   placeholder="Search games..." onkeyup="searchItems()">
+        </div>
+
         <table>
             <tr>
                 <th>Game</th>
+                <th>Category</th>
+                <th>Size</th>
                 <th>Link</th>
             </tr>
             <tr>
                 <td>Game 1</td>
-                <td><a href="#">Download Link</a></td>
+                <td><span class="tag">Action</span></td>
+                <td>50GB</td>
+                <td>
+                    <a href="#" class="download-link">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </td>
             </tr>
-            <!-- Add more games as needed -->
         </table>
     </div>
     <div class="footer">
         <p>&copy; 2023 My Links Repository</p>
     </div>
+    <script src="js/search.js"></script>
 </body>
 </html>
