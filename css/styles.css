@@ -29,13 +29,7 @@ body {
 }
 
 .sidebar h2 {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 2em;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    display: none;
 }
 
 .sidebar ul {
@@ -383,16 +377,21 @@ tr:hover td {
     justify-content: center;
     gap: 10px;
     margin-bottom: 30px;
-    cursor: pointer;
     text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
 .logo-container:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .logo-container h2 {
     margin: 0;
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .site-logo {
