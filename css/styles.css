@@ -437,25 +437,13 @@ tr:hover td {
     }
 }
 
-/* Auth Buttons */
-.auth-buttons {
-    margin-top: auto;
-    padding: 20px 0;
-}
-
+/* Supprimer tout le bloc Auth Buttons */
+.auth-buttons,
 .auth-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    text-decoration: none;
-    color: var(--text-light);
-    background: var(--bg-darker);
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    display: none;
 }
 
-.auth-btn:hover {
-    background: var(--primary-color);
-    color: white;
+/* Supprimer la section footer */
+.footer {
+    display: none;
 }
