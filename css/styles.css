@@ -79,8 +79,8 @@ body {
     margin-bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    color: transparent;
-    font-size: 0;
+    color: var(--text-light);
+    font-size: 1em;
 }
 
 .sidebar ul li a:before {
