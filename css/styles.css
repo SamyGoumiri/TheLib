@@ -539,7 +539,7 @@ tr:hover td {
     z-index: 1001;
     margin: 0;
     box-sizing: border-box;
-    border-top: none;
+    border: none;
 }
 
 .settings-link::before {
@@ -551,6 +551,7 @@ tr:hover td {
     width: 170px;
     height: 1px;
     background: rgba(255,255,255,0.1);
+    z-index: 1002;
 }
 
 .settings-link a {
