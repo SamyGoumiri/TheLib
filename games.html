@@ -37,24 +37,25 @@
                    placeholder="Search for games..." onkeyup="searchItems()">
         </div>
 
-        <table>
-            <tr>
-                <th>Game</th>
-                <th>Category</th>
-                <th>Size</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td>Game 1</td>
-                <td><span class="tag">Action</span></td>
-                <td>50GB</td>
-                <td>
+        <div class="card-grid">
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="assets/images/game-placeholder.jpg" alt="Game 1">
+                    <div class="game-overlay">
+                        <span class="tag">Action</span>
+                        <span class="size-tag">50GB</span>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Game 1</h3>
+                    <p class="game-description">A brief description of the game goes here...</p>
                     <a href="#" class="download-link">
-                        <i class="fas fa-external-link-alt"></i> Download
+                        <i class="fas fa-download"></i> Download
                     </a>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+            <!-- Add more game-card divs as needed -->
+        </div>
     </div>
     <script src="js/search.js"></script>
 </body>

@@ -327,9 +327,9 @@ tr:hover td {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .card {
@@ -468,4 +468,107 @@ tr:hover td {
     margin-top: auto;
     padding: 15px 0;
     border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.game-card, .software-card {
+    background: var(--bg-darker);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.game-card:hover, .software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(124, 77, 255, 0.2);
+}
+
+.game-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.05);
+}
+
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.game-info, .software-header {
+    padding: 1.5rem;
+}
+
+.software-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.software-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.software-meta {
+    flex: 1;
+}
+
+.version {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background: rgba(124, 77, 255, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.software-tags {
+    padding: 0 1.5rem;
+}
+
+.software-description {
+    padding: 1rem 1.5rem;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.size-tag {
+    background: rgba(0,0,0,0.6);
+    color: var(--text-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.game-card h3, .software-card h3 {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.game-description {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.game-card .download-link, .software-card .download-link {
+    margin: 0 1.5rem 1.5rem;
+    display: inline-flex;
 }

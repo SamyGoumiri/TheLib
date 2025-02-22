@@ -37,24 +37,25 @@
                    placeholder="Search software..." onkeyup="searchItems()">
         </div>
 
-        <table>
-            <tr>
-                <th>Software</th>
-                <th>Category</th>
-                <th>Version</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td>Software 1</td>
-                <td><span class="tag">Utility</span></td>
-                <td>1.0.0</td>
-                <td>
-                    <a href="#" class="download-link">
-                        <i class="fas fa-external-link-alt"></i> Download
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <div class="card-grid">
+            <div class="software-card">
+                <div class="software-header">
+                    <i class="fas fa-cube software-icon"></i>
+                    <div class="software-meta">
+                        <h3>Software 1</h3>
+                        <span class="version">v1.0.0</span>
+                    </div>
+                </div>
+                <div class="software-tags">
+                    <span class="tag">Utility</span>
+                </div>
+                <p class="software-description">A brief description of the software goes here...</p>
+                <a href="#" class="download-link">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+            <!-- Add more software-card divs as needed -->
+        </div>
     </div>
     <script src="js/search.js"></script>
 </body>
