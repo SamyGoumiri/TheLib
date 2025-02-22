@@ -892,3 +892,34 @@ tr:hover td {
 .settings-link a i {
     vertical-align: middle;
 }
+
+/* Standardisation des boutons */
+.sidebar ul li a, 
+.settings-link a,
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-normal);
+}
+
+/* Uniformisation des icônes */
+.menu-icon,
+.settings-icon,
+.search-icon {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Standardisation des cartes */
+.card,
+.game-card,
+.software-card,
+.settings-section {
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), 
+                box-shadow var(--transition-normal);
+}
