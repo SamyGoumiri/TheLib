@@ -424,37 +424,24 @@ tr:hover td {
 }
 
 .logo-container {
+    height: 48px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding: 12px 15px;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    color: transparent;
-    font-size: 0;
-    height: 48px; /* Hauteur fixe pour le conteneur du logo */
-    margin-bottom: 20px;
 }
 
 .logo-container h2 {
     display: block;
     margin: 0;
+    margin-left: 15px;
     color: var(--primary-color);
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 800;
     letter-spacing: -0.5px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease;
-    font-size: initial;
-    font-size: 1.5em; /* Taille réduite pour mieux s'aligner */
 }
 
 .site-logo {
@@ -641,14 +628,14 @@ tr:hover td {
     align-items: center;
     z-index: 1000;
     padding: 2rem;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .modal-content {
     background: var(--bg-darker);
     width: 95%;
-    max-width: 1200px;
-    min-height: 80vh;
-    border-radius: 25px;
     padding: 3rem;
     position: relative;
     box-shadow: 0 20px 40px rgba(124, 77, 255, 0.3);
