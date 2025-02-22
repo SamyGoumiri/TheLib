@@ -49,17 +49,21 @@
         </div>
 
         <div class="card-grid">
+            <div class="game-card">
+                <div class="game-image">
+                    <i class="fas fa-gamepad" aria-hidden="true"></i>
+                    <div class="game-overlay">
+                        <span class="tag">Action</span>
+                        <span class="size-tag">50GB</span>
+                    </div>
+                </div>
+                <div class="title-overlay">
+                    <h3>Game 1</h3>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/search.js" defer></script>
     <script src="js/modal.js" defer></script>
-    <script type="module">
-        import { GamesRenderer } from './js/gamesRenderer.js';
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const renderer = new GamesRenderer();
-            renderer.renderGames();
-        });
-    </script>
 </body>
 </html>
