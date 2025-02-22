@@ -37,7 +37,7 @@ body {
 .sidebar {
     width: 200px;
     background-color: #1f1f1f;
-    padding: 15px;
+    padding: 15px 15px 80px; /* Ajout de padding en bas pour le bouton settings */
     height: 100vh;
     position: fixed;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
@@ -107,6 +107,9 @@ body {
     margin-right: 12px;
     font-size: 1.2em;
     font-size: initial;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sidebar ul li a span {
@@ -434,11 +437,7 @@ tr:hover td {
     box-sizing: border-box;
     color: transparent;
     font-size: 0;
-}
-
-.logo-container:hover {
-    background: rgba(124, 77, 255, 0.1);
-    transform: translateY(-2px);
+    height: 48px; /* Hauteur fixe pour le conteneur du logo */
 }
 
 .logo-container h2 {
@@ -454,6 +453,7 @@ tr:hover td {
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease;
     font-size: initial;
+    font-size: 1.5em; /* Taille réduite pour mieux s'aligner */
 }
 
 .site-logo {
@@ -461,6 +461,8 @@ tr:hover td {
     height: 32px;
     animation: pulse 2s ease-in-out infinite;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    width: 40px; /* Taille augmentée */
+    height: 40px; /* Taille augmentée */
 }
 
 @keyframes pulse {
@@ -497,13 +499,16 @@ tr:hover td {
 }
 
 .settings-link {
-    margin-top: auto;
-    width: 100%;
-    padding: 15px 15px 0;
-    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px; /* Même largeur que la sidebar */
+    padding: 15px;
+    background-color: var(--bg-darker);
     border-top: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 15px;
-    position: static;
+    z-index: 1001; /* Au-dessus de la sidebar */
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .settings-link a {
@@ -515,13 +520,16 @@ tr:hover td {
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
-    color: transparent;
-    font-size: 0;
+    width: 100%;
 }
 
-.settings-link a:hover {
-    background: rgba(124, 77, 255, 0.2);
-    transform: translateY(-2px);
+.settings-link a i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    font-size: 1.2em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .settings-link a span {
@@ -531,7 +539,6 @@ tr:hover td {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
-    font-size: initial;
 }
 
 .game-card, .software-card {
