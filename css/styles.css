@@ -122,19 +122,19 @@ body {
     font-size: initial;
 }
 
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 1.1em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .content {
     flex: 1;
     padding: 20px;
     margin-left: 230px;
-    opacity: 0;
-    animation: fadeSlideIn 0.5s ease forwards;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    position: relative;
-    padding-bottom: 10px;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
