@@ -816,3 +816,9 @@ tr:hover td {
         height: 300px;
     }
 }
+
+.sidebar ul li a i,
+.download-link i,
+.settings-link a i {
+    vertical-align: middle;
+}
