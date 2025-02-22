@@ -41,17 +41,23 @@ function showModal(cardData) {
     if (!cardData) return;
 
     const modal = modalInstance || createModal();
-    const img = modal.querySelector('img');
-    const title = modal.querySelector('.modal-title');
-    const meta = modal.querySelector('.modal-meta');
+    
+    // Ajout de la vérification des données
+    const data = {
+        image: cardData.image || 'assets/images/placeholder.jpg',
+        title: cardData.title || 'Untitled',
+        tags: cardData.tags || '',
+        version: cardData.version || '',
+        size: cardData.size || ''
+    };
 
     requestAnimationFrame(() => {
-        img.src = cardData.image || 'assets/images/placeholder.jpg';
-        title.textContent = cardData.title || '';
-        meta.innerHTML = [
-            cardData.tags && `<span class="tag">${cardData.tags}</span>`,
-            cardData.version && `<span class="version">${cardData.version}</span>`,
-            cardData.size && `<span class="size-tag">${cardData.size}</span>`
+        modal.querySelector('img').src = data.image;
+        modal.querySelector('.modal-title').textContent = data.title;
+        modal.querySelector('.modal-meta').innerHTML = [
+            data.tags && `<span class="tag">${data.tags}</span>`,
+            data.version && `<span class="version">${data.version}</span>`,
+            data.size && `<span class="size-tag">${data.size}</span>`
         ].filter(Boolean).join('');
 
         modal.classList.add('modal-active');

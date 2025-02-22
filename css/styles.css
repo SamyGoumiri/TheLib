@@ -47,6 +47,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     overflow-y: auto;
+    padding-bottom: 80px;
 }
 
 .sidebar h2 {
@@ -106,7 +107,6 @@ body {
     color: var(--primary-color);
     margin-right: 12px;
     font-size: 1.2em;
-    font-size: initial;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -438,6 +438,7 @@ tr:hover td {
     color: transparent;
     font-size: 0;
     height: 48px; /* Hauteur fixe pour le conteneur du logo */
+    margin-bottom: 20px;
 }
 
 .logo-container h2 {
