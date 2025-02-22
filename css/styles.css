@@ -111,6 +111,8 @@ body {
     transition: all var(--transition-normal);
     background: rgba(124, 77, 255, 0.1);
     box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden; /* Empêche les icônes de déborder */
 }
 
 .sidebar ul li a:before {
@@ -145,6 +147,12 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative; /* Empêche le positionnement absolu par défaut */
+    left: auto; /* Retire le positionnement left existant */
+    width: 24px; /* Largeur fixe pour l'icône */
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    text-align: center;
+    margin-right: var(--spacing-md);
 }
 
 .sidebar ul li a span,
@@ -157,6 +165,8 @@ body {
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
     font-size: initial;
+    position: relative; /* Pour rester au-dessus de l'effet hover */
+    z-index: 1;
 }
 
 .menu-icon {
@@ -166,6 +176,12 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative; /* Empêche le positionnement absolu par défaut */
+    left: auto; /* Retire le positionnement left existant */
+    width: 24px; /* Largeur fixe pour l'icône */
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    text-align: center;
+    margin-right: var(--spacing-md);
 }
 
 .content {
@@ -444,7 +460,7 @@ tr:hover td {
     width: 100%;
     padding: 12px 15px 12px 45px;
     background: #333;
-    color: var(--text-light);
+    color: var (--text-light);
     border: none;
     border-radius: 8px;
     margin: 10px 0;
@@ -631,6 +647,8 @@ tr:hover td {
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
+    position: relative;
+    overflow: hidden; /* Empêche les icônes de déborder */
 }
 
 .settings-link a i {
@@ -642,6 +660,12 @@ tr:hover td {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative; /* Empêche le positionnement absolu par défaut */
+    left: auto; /* Retire le positionnement left existant */
+    width: 24px; /* Largeur fixe pour l'icône */
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    text-align: center;
+    margin-right: var(--spacing-md);
 }
 
 .settings-link a span {
@@ -651,6 +675,8 @@ tr:hover td {
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--text-light);
     letter-spacing: 0.5px;
+    position: relative; /* Pour rester au-dessus de l'effet hover */
+    z-index: 1;
 }
 
 .game-card, .software-card {
@@ -922,4 +948,16 @@ tr:hover td {
     box-shadow: var(--shadow-sm);
     transition: transform var(--transition-normal), 
                 box-shadow var(--transition-normal);
+}
+
+/* Correction de l'effet hover */
+.sidebar ul li a:hover,
+.settings-link a:hover {
+    transform: translateY(-2px);
+}
+
+/* Ajustement de l'effet de survol pour qu'il n'affecte pas les icônes */
+.sidebar ul li a::before,
+.settings-link a::before {
+    z-index: 0; /* Place l'effet sous le contenu */
 }
