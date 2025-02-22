@@ -731,9 +731,43 @@ tr:hover td {
 .game-description {
     display: none;
 }
+
+.game-info, .software-header, .software-meta, .version, .software-tags, .software-description, .size-tag, .game-card h3, .software-card h3, .game-description, .game-card .download-link, .software-card .download-link {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    background: var(--bg-darker);
+    width: 95%;
+    max-width: 1200px;
+    min-height: 80vh;
+    border-radius: var(--border-radius-lg);
     padding: 3rem;
     position: relative;
-    box-shadow: 0 20px 40px rgba(124, 77, 255, 0.3);
+    box-shadow: var(--shadow-lg);
     animation: modalSlideIn 0.4s ease-out;
     display: grid;
     grid-template-columns: 1fr 1fr;
