@@ -527,10 +527,10 @@ tr:hover td {
     width: 200px;
     padding: 15px;
     background-color: var(--bg-darker);
-    border-top: 1px solid rgba(255,255,255,0.1);
     z-index: 1001;
     margin: 0;
     box-sizing: border-box;
+    border-top: none;
 }
 
 .settings-link::before {
