@@ -1,8 +1,7 @@
-let modalInstance = null; // Singleton pattern
+let modalInstance = null;
 
 function createModal() {
     if (modalInstance) return modalInstance;
-
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
     modal.innerHTML = `
@@ -20,7 +19,6 @@ function createModal() {
         </div>
     `;
 
-    // Gestionnaires d'événements optimisés
     const closeModal = () => modal.classList.remove('modal-active');
     
     modal.querySelector('.modal-close').addEventListener('click', closeModal);
@@ -28,7 +26,6 @@ function createModal() {
         if (e.target === modal) closeModal();
     });
     
-    // Fermeture avec la touche Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('modal-active')) {
             closeModal();
@@ -61,10 +58,9 @@ function showModal(cardData) {
     });
 }
 
-// Initialisation des écouteurs d'événements
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.game-card, .software-card');
-    if (!cards.length) return; // Protection si pas de cartes
+    if (!cards.length) return;
     
     cards.forEach(card => {
         card.addEventListener('click', () => {
@@ -80,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Nettoyage en quittant la page
 window.addEventListener('unload', () => {
     if (modalInstance) {
         modalInstance.remove();

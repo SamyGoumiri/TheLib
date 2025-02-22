@@ -1,20 +1,16 @@
-// Appliquer les paramètres au chargement
 document.addEventListener('DOMContentLoaded', () => {
     const themeSelect = document.getElementById('theme-select');
     const langSelect = document.getElementById('language-select');
 
-    if (!themeSelect || !langSelect) return; // Protection contre les erreurs
+    if (!themeSelect || !langSelect) return;
 
-    // Récupération des paramètres sauvegardés
     const savedTheme = localStorage.getItem('theme') || 'dark';
     const savedLang = localStorage.getItem('language') || 'en';
 
-    // Application des paramètres
     document.body.className = savedTheme;
     themeSelect.value = savedTheme;
     langSelect.value = savedLang;
 
-    // Gestionnaires d'événements optimisés
     const handleThemeChange = () => {
         const theme = themeSelect.value;
         document.body.className = theme;

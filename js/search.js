@@ -1,15 +1,15 @@
 function searchItems() {
     const searchInput = document.getElementById('search-input');
-    if (!searchInput) return; // Protection contre les erreurs
+    if (!searchInput) return;
 
-    const filter = searchInput.value.toLowerCase().trim(); // Ajout de trim()
+    const filter = searchInput.value.toLowerCase().trim();
     
     if (this.searchTimeout) clearTimeout(this.searchTimeout);
     
     this.searchTimeout = setTimeout(() => {
         const cards = document.querySelectorAll('.game-card, .software-card');
         
-        requestAnimationFrame(() => { // Optimisation des performances d'animation
+        requestAnimationFrame(() => {
             cards.forEach(card => {
                 const searchableElements = [
                     card.querySelector('h3')?.textContent || '',
@@ -25,7 +25,6 @@ function searchItems() {
     }, 300);
 }
 
-// Nettoyage du timeout lors de la navigation
 window.addEventListener('unload', () => {
     if (this.searchTimeout) clearTimeout(this.searchTimeout);
 });
