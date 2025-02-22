@@ -974,3 +974,59 @@ tr:hover td {
     justify-content: center;
     background: linear-gradient(45deg, var(--bg-darker), #2a2a2a);
 }
+
+/* Correction des icônes */
+.sidebar ul li a i,
+.settings-link a i,
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-size: 1.2em;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Ajustement des conteneurs de boutons */
+.sidebar ul li a,
+.settings-link a {
+    padding: var(--spacing-md) var(--spacing-lg);
+    height: 48px;
+    gap: var(--spacing-md);
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustement des icônes dans les titres */
+h1 i,
+h2 i {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Correction des icônes dans les titres */
+.content h1 i,
+.settings-section h2 i {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-right: var(--spacing-md);
+}
+
+/* Assurer la cohérence des icônes dans la barre de recherche */
+.search-icon i {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
