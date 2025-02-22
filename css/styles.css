@@ -213,9 +213,8 @@ h1:after {
 }
 
 .content h1 i {
-    margin-right: 12px;
-    font-size: 0.9em;
-    vertical-align: middle;
+    margin-right: var(--spacing-md);
+    font-size: 1.2em;
 }
 
 table {
@@ -1010,18 +1009,23 @@ h2 i {
 }
 
 /* Correction des icônes dans les titres */
+h1 i,
+h2 i,
 .content h1 i,
-.settings-section h2 i {
+.settings-section h2 i,
+.search-icon i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2em;
+    margin-right: var(--spacing-md);
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    margin-right: var(--spacing-md);
+    vertical-align: middle;
+    position: relative;
 }
 
 /* Assurer la cohérence des icônes dans la barre de recherche */
