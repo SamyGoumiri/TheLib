@@ -37,13 +37,14 @@ body {
 .sidebar {
     width: 200px;
     background-color: #1f1f1f;
-    padding: 15px;
+    padding: 20px;
     height: 100vh;
     position: fixed;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
     z-index: 1000;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .sidebar h2 {
@@ -53,6 +54,7 @@ body {
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    width: 170px;
     flex: 1;
 }
 
@@ -61,16 +63,15 @@ body {
 }
 
 .sidebar ul li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #e0e0e0;
-    display: block;
-    padding: 10px;
-    border-radius: 4px;
+    color: var(--text-light);
+    padding: 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    margin: 5px 0;
-    position: relative;
-    overflow: hidden;
-    will-change: transform;
+    background: rgba(124, 77, 255, 0.1);
+    margin-bottom: 10px;
 }
 
 .sidebar ul li a:before {
@@ -89,7 +90,23 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #333;
+    background: rgba(124, 77, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.sidebar ul li a i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+
+.sidebar ul li a span {
+    font-weight: 600;
+    font-size: 1.1em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
 }
 
 .content {
@@ -403,6 +420,7 @@ tr:hover td {
     cursor: pointer;
     padding: 12px;
     border-radius: 8px;
+    width: 170px;
 }
 
 .logo-container:hover {
