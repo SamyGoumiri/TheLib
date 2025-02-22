@@ -504,17 +504,14 @@ tr:hover td {
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
+    height: 250px;
 }
 
-.game-card:hover, .software-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(124, 77, 255, 0.2);
-}
-
-.game-image {
+.game-image, .software-image {
     position: relative;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    height: 200px;
 }
 
 .game-image img {
@@ -524,11 +521,20 @@ tr:hover td {
     transition: transform 0.3s ease;
 }
 
-.game-card:hover .game-image img {
-    transform: scale(1.05);
+.software-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--bg-darker), #2a2a2a);
 }
 
-.game-overlay {
+.software-image i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.game-overlay, .software-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -536,67 +542,136 @@ tr:hover td {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
 }
 
-.game-info, .software-header {
-    padding: 1.5rem;
+.title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(124, 77, 255, 0.9), transparent);
+    text-align: center;
 }
 
-.software-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.software-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-}
-
-.software-meta {
-    flex: 1;
-}
-
-.version {
-    font-size: 0.8rem;
-    color: var(--primary-color);
-    background: rgba(124, 77, 255, 0.1);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-}
-
-.software-tags {
-    padding: 0 1.5rem;
-}
-
-.software-description {
-    padding: 1rem 1.5rem;
-    color: #999;
-    font-size: 0.9rem;
-}
-
-.size-tag {
-    background: rgba(0,0,0,0.6);
-    color: var(--text-light);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.game-card h3, .software-card h3 {
+.title-overlay h3 {
     margin: 0;
-    color: var(--text-light);
+    color: white;
     font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+.game-card:hover .game-image img,
+.software-card:hover .software-image i {
+    transform: scale(1.05);
+}
+
+/* Supprimer les styles non utilisés */
+.game-info,
+.software-header,
+.software-description,
 .game-description {
-    color: #999;
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1rem;
+    display: none;
 }
 
-.game-card .download-link, .software-card .download-link {
-    margin: 0 1.5rem 1.5rem;
-    display: inline-flex;
+.game-info, .software-header, .software-meta, .version, .software-tags, .software-description, .size-tag, .game-card h3, .software-card h3, .game-description, .game-card .download-link, .software-card .download-link {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--bg-darker);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(124, 77, 255, 0.2);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.modal-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-active {
+    display: flex;
 }
