@@ -37,7 +37,7 @@ body {
 .sidebar {
     width: 200px;
     background-color: #1f1f1f;
-    padding: 20px;
+    padding: 15px;  /* Réduit de 20px à 15px */
     height: 100vh;
     position: fixed;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
@@ -46,6 +46,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between; /* Ajout pour meilleure distribution verticale */
+    overflow: hidden; /* Ajout pour empêcher le débordement */
 }
 
 .sidebar h2 {
@@ -54,14 +55,15 @@ body {
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
-    width: 170px;
+    padding: 0 15px; /* Ajout de padding horizontal */
+    width: 100%; /* Changé de 170px à 100% */
     flex: 1;
-    margin: 0; /* Ajout pour centrage vertical */
+    margin: 30px 0; /* Ajouté pour espacer la liste du logo et des settings */
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
 }
 
 .sidebar ul li {
-    margin: 10px 0;
+    margin: 20px 0; /* Augmenté de 10px à 20px */
 }
 
 .sidebar ul li a {
@@ -73,7 +75,9 @@ body {
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Retiré car on utilise le margin du li */
+    width: 100%; /* Pour s'assurer que le lien prend toute la largeur */
+    box-sizing: border-box;
 }
 
 .sidebar ul li a:before {
@@ -93,7 +97,7 @@ body {
 
 .sidebar ul li a:hover {
     background: rgba(124, 77, 255, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02); /* Effet plus subtil */
 }
 
 .sidebar ul li a i {
@@ -114,7 +118,7 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 220px;
+    margin-left: 230px; /* Ajusté pour correspondre à la largeur totale de la sidebar */
     opacity: 0;
     animation: fadeSlideIn 0.5s ease forwards;
 }
@@ -420,9 +424,10 @@ tr:hover td {
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    padding: 12px;
+    padding: 12px 15px; /* Ajout de padding horizontal */
     border-radius: 8px;
-    width: 170px;
+    width: 100%; /* Changé de 170px à 100% */
+    box-sizing: border-box;
 }
 
 .logo-container:hover {
@@ -490,7 +495,9 @@ tr:hover td {
     border-top: 1px solid rgba(255,255,255,0.1);
     position: relative; /* Modification: fixed causait des problèmes */
     bottom: 0; /* Ajustement */
-    width: 170px;
+    width: 100%; /* Changé de 170px à 100% */
+    padding: 0 15px; /* Ajout de padding horizontal */
+    box-sizing: border-box;
 }
 
 .settings-link a {
