@@ -291,10 +291,10 @@ tr:hover td {
 }
 
 .download-link {
-    padding: 8px 15px;
+    padding: 12px 15px;
     background: var(--accent-gradient);
     color: var(--bg-dark);
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
