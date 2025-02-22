@@ -459,8 +459,8 @@ tr:hover td {
 }
 
 .settings-icon {
-    color: #7c4dff;
-    margin-right: 8px;
+    color: var(--primary-color);
+    margin-right: 12px;
     font-size: 1.2em;
 }
 
@@ -468,6 +468,34 @@ tr:hover td {
     margin-top: auto;
     padding: 15px 0;
     border-top: 1px solid rgba(255,255,255,0.1);
+    position: fixed;
+    bottom: 20px;
+    width: 170px;
+}
+
+.settings-link a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(124, 77, 255, 0.1);
+}
+
+.settings-link a:hover {
+    background: rgba(124, 77, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.settings-link a span {
+    font-weight: 600;
+    font-size: 1.1em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
 }
 
 .game-card, .software-card {
