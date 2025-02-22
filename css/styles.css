@@ -45,6 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* Ajout pour meilleure distribution verticale */
 }
 
 .sidebar h2 {
@@ -56,6 +57,7 @@ body {
     padding: 0;
     width: 170px;
     flex: 1;
+    margin: 0; /* Ajout pour centrage vertical */
 }
 
 .sidebar ul li {
@@ -486,8 +488,8 @@ tr:hover td {
     margin-top: auto;
     padding: 15px 0;
     border-top: 1px solid rgba(255,255,255,0.1);
-    position: fixed;
-    bottom: 20px;
+    position: relative; /* Modification: fixed causait des problèmes */
+    bottom: 0; /* Ajustement */
     width: 170px;
 }
 

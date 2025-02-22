@@ -64,6 +64,7 @@ function showModal(cardData) {
 // Initialisation des écouteurs d'événements
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.game-card, .software-card');
+    if (!cards.length) return; // Protection si pas de cartes
     
     cards.forEach(card => {
         card.addEventListener('click', () => {
@@ -77,4 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
             showModal(cardData);
         });
     });
+});
+
+// Nettoyage en quittant la page
+window.addEventListener('unload', () => {
+    if (modalInstance) {
+        modalInstance.remove();
+        modalInstance = null;
+    }
 });
