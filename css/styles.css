@@ -37,7 +37,7 @@ body {
 .sidebar {
     width: 200px;
     background-color: #1f1f1f;
-    padding: 15px 15px 80px; /* Ajout de padding en bas pour le bouton settings */
+    padding: 15px 15px 80px;
     height: 100vh;
     position: fixed;
     box-shadow: 2px 0 10px rgba(0,0,0,0.3);
@@ -428,13 +428,13 @@ tr:hover td {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo-container h2 {
-    display: block;
+    display: block !important;
     margin: 0;
     margin-left: 15px;
-    color: var(--primary-color);
     font-size: 1.5em;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -449,8 +449,8 @@ tr:hover td {
     height: 32px;
     animation: pulse 2s ease-in-out infinite;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-    width: 40px; /* Taille augmentée */
-    height: 40px; /* Taille augmentée */
+    width: 40px;
+    height: 40px;
 }
 
 @keyframes pulse {
@@ -490,13 +490,24 @@ tr:hover td {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 200px; /* Même largeur que la sidebar */
+    width: 200px;
     padding: 15px;
     background-color: var(--bg-darker);
     border-top: 1px solid rgba(255,255,255,0.1);
-    z-index: 1001; /* Au-dessus de la sidebar */
+    z-index: 1001;
     margin: 0;
     box-sizing: border-box;
+}
+
+.settings-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
 }
 
 .settings-link a {
