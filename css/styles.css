@@ -70,16 +70,17 @@ body {
 .sidebar ul li a {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    padding: 12px 15px;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
     text-decoration: none;
     color: var(--text-light);
-    padding: 12px;
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
     margin-bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-    color: var(--text-light);
     font-size: 1em;
 }
 
@@ -104,8 +105,10 @@ body {
 }
 
 .sidebar ul li a i {
+    width: 20px;
+    text-align: center;
+    margin: 0;
     color: var(--primary-color);
-    margin-right: 12px;
     font-size: 1.2em;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -113,6 +116,7 @@ body {
 }
 
 .sidebar ul li a span {
+    flex: 1;
     font-weight: 600;
     font-size: 1.1em;
     background: var(--accent-gradient);
@@ -555,21 +559,24 @@ tr:hover td {
 }
 
 .settings-link a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: flex-start;
+    padding: 12px 15px;
+    gap: 12px;
+    width: 100%;
     text-decoration: none;
     color: var(--text-light);
-    padding: 12px;
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
-    width: auto;
 }
 
 .settings-link a i {
+    width: 20px;
+    text-align: center;
+    margin: 0;
     color: var(--primary-color);
-    margin-right: 12px;
     font-size: 1.2em;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
