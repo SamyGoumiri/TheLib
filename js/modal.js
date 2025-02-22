@@ -19,7 +19,13 @@ function createModal() {
         </div>
     `;
 
-    const closeModal = () => modal.classList.remove('modal-active');
+    const closeModal = () => {
+        modal.classList.add('modal-closing');
+        modal.classList.remove('modal-active');
+        setTimeout(() => {
+            modal.classList.remove('modal-closing');
+        }, 300); // Durée de l'animation
+    };
     
     modal.querySelector('.modal-close').addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => {
