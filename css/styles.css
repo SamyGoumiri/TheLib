@@ -961,3 +961,16 @@ tr:hover td {
 .settings-link a::before {
     z-index: 0; /* Place l'effet sous le contenu */
 }
+
+.game-image i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.game-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--bg-darker), #2a2a2a);
+}
