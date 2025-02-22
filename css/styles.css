@@ -78,6 +78,8 @@ body {
     margin-bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    color: transparent;
+    font-size: 0;
 }
 
 .sidebar ul li a:before {
@@ -104,6 +106,7 @@ body {
     color: var(--primary-color);
     margin-right: 12px;
     font-size: 1.2em;
+    font-size: initial;
 }
 
 .sidebar ul li a span {
@@ -113,6 +116,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
+    font-size: initial;
 }
 
 .content {
@@ -428,6 +432,8 @@ tr:hover td {
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
+    color: transparent;
+    font-size: 0;
 }
 
 .logo-container:hover {
@@ -447,6 +453,7 @@ tr:hover td {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease;
+    font-size: initial;
 }
 
 .site-logo {
@@ -508,6 +515,8 @@ tr:hover td {
     border-radius: 8px;
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
+    color: transparent;
+    font-size: 0;
 }
 
 .settings-link a:hover {
@@ -522,6 +531,7 @@ tr:hover td {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
+    font-size: initial;
 }
 
 .game-card, .software-card {
