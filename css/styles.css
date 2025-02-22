@@ -636,6 +636,9 @@ tr:hover td {
 .modal-content {
     background: var(--bg-darker);
     width: 95%;
+    max-width: 1200px;
+    min-height: 80vh;
+    border-radius: 25px;
     padding: 3rem;
     position: relative;
     box-shadow: 0 20px 40px rgba(124, 77, 255, 0.3);
@@ -643,6 +646,9 @@ tr:hover td {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    transform: translateY(100px);
+    opacity: 0;
 }
 
 .modal-close {
@@ -725,6 +731,22 @@ tr:hover td {
 
 .modal-active {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-closing {
+    opacity: 0;
+}
+
+.modal-closing .modal-content {
+    transform: scale(0.95);
+    opacity: 0;
 }
 
 @media (max-width: 768px) {
