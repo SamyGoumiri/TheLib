@@ -24,7 +24,7 @@ function createModal() {
         modal.classList.remove('modal-active');
         setTimeout(() => {
             modal.classList.remove('modal-closing');
-        }, 300); // Durée de l'animation
+        }, 300);
     };
     
     modal.querySelector('.modal-close').addEventListener('click', closeModal);
@@ -48,7 +48,6 @@ function showModal(cardData) {
 
     const modal = modalInstance || createModal();
     
-    // Ajout de la vérification des données
     const data = {
         image: cardData.image || 'assets/images/placeholder.jpg',
         title: cardData.title || 'Untitled',

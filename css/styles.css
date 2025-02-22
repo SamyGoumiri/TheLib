@@ -4,7 +4,7 @@
     --hover-color: #9575ff;
     --bg-dark: #121212;
     --bg-darker: #1f1f1f;
-    --text-light: #f0f0f0; /* Amélioré pour meilleur contraste */
+    --text-light: #f0f0f0;
     --accent-gradient: linear-gradient(45deg, #7c4dff, #b388ff);
     
     /* Espacements */
@@ -112,7 +112,7 @@ body {
     background: rgba(124, 77, 255, 0.1);
     box-shadow: var(--shadow-sm);
     position: relative;
-    overflow: hidden; /* Empêche les icônes de déborder */
+    overflow: hidden;
 }
 
 .sidebar ul li a:before {
@@ -147,10 +147,10 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative; /* Empêche le positionnement absolu par défaut */
-    left: auto; /* Retire le positionnement left existant */
-    width: 24px; /* Largeur fixe pour l'icône */
-    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    position: relative;
+    left: auto;
+    width: 24px;
+    flex-shrink: 0;
     text-align: center;
     margin-right: var(--spacing-md);
 }
@@ -165,7 +165,7 @@ body {
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.5px;
     font-size: initial;
-    position: relative; /* Pour rester au-dessus de l'effet hover */
+    position: relative;
     z-index: 1;
 }
 
@@ -176,10 +176,10 @@ body {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative; /* Empêche le positionnement absolu par défaut */
-    left: auto; /* Retire le positionnement left existant */
-    width: 24px; /* Largeur fixe pour l'icône */
-    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    position: relative;
+    left: auto;
+    width: 24px;
+    flex-shrink: 0;
     text-align: center;
     margin-right: var(--spacing-md);
 }
@@ -647,7 +647,7 @@ tr:hover td {
     transition: all 0.3s ease;
     background: rgba(124, 77, 255, 0.1);
     position: relative;
-    overflow: hidden; /* Empêche les icônes de déborder */
+    overflow: hidden;
 }
 
 .settings-link a i {
@@ -659,10 +659,10 @@ tr:hover td {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative; /* Empêche le positionnement absolu par défaut */
-    left: auto; /* Retire le positionnement left existant */
-    width: 24px; /* Largeur fixe pour l'icône */
-    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    position: relative;
+    left: auto;
+    width: 24px;
+    flex-shrink: 0;
     text-align: center;
     margin-right: var(--spacing-md);
 }
@@ -674,7 +674,7 @@ tr:hover td {
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--text-light);
     letter-spacing: 0.5px;
-    position: relative; /* Pour rester au-dessus de l'effet hover */
+    position: relative;
     z-index: 1;
 }
 
@@ -918,7 +918,6 @@ tr:hover td {
     vertical-align: middle;
 }
 
-/* Standardisation des boutons */
 .sidebar ul li a, 
 .settings-link a,
 .download-link {
@@ -930,7 +929,6 @@ tr:hover td {
     transition: all var(--transition-normal);
 }
 
-/* Uniformisation des icônes */
 .menu-icon,
 .settings-icon,
 .search-icon {
@@ -938,7 +936,6 @@ tr:hover td {
     vertical-align: middle;
 }
 
-/* Standardisation des cartes */
 .card,
 .game-card,
 .software-card,
@@ -949,16 +946,14 @@ tr:hover td {
                 box-shadow var(--transition-normal);
 }
 
-/* Correction de l'effet hover */
 .sidebar ul li a:hover,
 .settings-link a:hover {
     transform: translateY(-2px);
 }
 
-/* Ajustement de l'effet de survol pour qu'il n'affecte pas les icônes */
 .sidebar ul li a::before,
 .settings-link a::before {
-    z-index: 0; /* Place l'effet sous le contenu */
+    z-index: 0;
 }
 
 .game-image i {
@@ -988,7 +983,6 @@ tr:hover td {
     flex-shrink: 0;
 }
 
-/* Ajustement des conteneurs de boutons */
 .sidebar ul li a,
 .settings-link a {
     padding: var(--spacing-md) var(--spacing-lg);
@@ -998,7 +992,6 @@ tr:hover td {
     align-items: center;
 }
 
-/* Ajustement des icônes dans les titres */
 h1 i,
 h2 i {
     width: 32px;
@@ -1008,7 +1001,6 @@ h2 i {
     align-items: center;
 }
 
-/* Correction des icônes dans les titres */
 h1 i,
 h2 i,
 .content h1 i,
@@ -1028,7 +1020,6 @@ h2 i,
     position: relative;
 }
 
-/* Assurer la cohérence des icônes dans la barre de recherche */
 .search-icon i {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
