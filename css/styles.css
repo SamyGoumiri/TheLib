@@ -1025,3 +1025,50 @@ h2 i,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Amélioration des titres de page */
+.content h1 {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    background: var(--bg-darker);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Correction du cadrage des icônes dans les titres */
+.content h1 i {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing-lg);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Suppression de la bordure inférieure existante */
+.content h1:after {
+    display: none;
+}
+
+/* Ajustement global des icônes dans l'interface */
+.menu-icon,
+.search-icon i,
+.settings-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
