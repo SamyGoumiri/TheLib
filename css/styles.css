@@ -546,9 +546,8 @@ tr:hover td {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
+    left: 15px;
+    width: calc(100% - 30px);
     height: 1px;
     background: rgba(255,255,255,0.1);
     z-index: 1002;
