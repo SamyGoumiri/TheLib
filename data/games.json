@@ -1,0 +1,94 @@
+{
+  "games": [
+    {
+      "id": "cyberpunk2077",
+      "name": "Cyberpunk 2077",
+      "version": "v1.2",
+      "size": "45GB",
+      "date": "2023-09-15",
+      "tags": ["Action", "Adventure", "RPG"],
+      "description": "An open-world action-adventure story set in Night City."
+    },
+    {
+      "id": "citiesskylines",
+      "name": "Cities: Skylines",
+      "version": "v2.0",
+      "size": "8GB",
+      "date": "2023-10-02",
+      "tags": ["Strategy", "Simulation"],
+      "description": "A modern take on the classic city builder simulation."
+    },
+    {
+      "id": "stardewvalley",
+      "name": "Stardew Valley",
+      "version": "v1.0.5",
+      "size": "4GB",
+      "date": "2023-08-21",
+      "tags": ["Adventure", "Indie"],
+      "description": "Farming simulation RPG inspired by classics."
+    },
+    {
+      "id": "eldenring",
+      "name": "Elden Ring",
+      "version": "v1.5.2",
+      "size": "26GB",
+      "date": "2023-11-01",
+      "tags": ["Action", "RPG", "Fantasy"],
+      "description": "An action RPG developed by FromSoftware and written by George R.R. Martin."
+    },
+    {
+      "id": "codwarzone",
+      "name": "Call of Duty: Warzone",
+      "version": "v3.1.0",
+      "size": "32GB",
+      "date": "2023-10-15",
+      "tags": ["FPS", "Action", "Multiplayer"],
+      "description": "Free-to-play battle royale game from the Call of Duty franchise."
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "version": "v1.20.1",
+      "size": "2GB",
+      "date": "2023-07-10",
+      "tags": ["Sandbox", "Adventure"],
+      "description": "A game about placing blocks and going on adventures."
+    },
+    {
+      "id": "gtav",
+      "name": "Grand Theft Auto V",
+      "version": "v1.57",
+      "size": "105GB",
+      "date": "2023-08-05",
+      "tags": ["Action", "Adventure", "Open World"],
+      "description": "An action-adventure game in the fictional state of San Andreas."
+    },
+    {
+      "id": "rocketleague",
+      "name": "Rocket League",
+      "version": "v2.21",
+      "size": "14GB",
+      "date": "2023-09-30",
+      "tags": ["Sports", "Racing", "Multiplayer"],
+      "description": "A vehicular soccer video game developed by Psyonix."
+    },
+    {
+      "id": "valorant",
+      "name": "Valorant",
+      "version": "v7.0",
+      "size": "16GB",
+      "date": "2023-11-10",
+      "tags": ["FPS", "Tactical", "Multiplayer"],
+      "description": "A free-to-play multiplayer tactical first-person shooter."
+    },
+    {
+      "id": "apexlegends",
+      "name": "Apex Legends",
+      "version": "v18.1",
+      "size": "38GB",
+      "date": "2023-10-22",
+      "tags": ["FPS", "Battle Royale", "Multiplayer"],
+      "description": "A free-to-play battle royale-hero shooter game."
+    }
+  ]
+}

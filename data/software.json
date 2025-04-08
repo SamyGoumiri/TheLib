@@ -1,0 +1,94 @@
+{
+  "software": [
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "version": "v2.1.4",
+      "size": "2GB",
+      "date": "2023-11-05",
+      "tags": ["Utility", "Productivity"],
+      "description": "Lightweight but powerful source code editor."
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "version": "v3.2.1",
+      "size": "120MB",
+      "date": "2023-09-22",
+      "tags": ["Media", "Audio"],
+      "description": "Free, open source audio editor and recorder."
+    },
+    {
+      "id": "malwarebytes",
+      "name": "Malwarebytes",
+      "version": "v10.4",
+      "size": "85MB",
+      "date": "2023-10-10",
+      "tags": ["Utility", "Security"],
+      "description": "Anti-malware software protecting devices from threats."
+    },
+    {
+      "id": "photoshop",
+      "name": "Adobe Photoshop",
+      "version": "v23.4.1",
+      "size": "3.5GB",
+      "date": "2023-11-12",
+      "tags": ["Design", "Creative"],
+      "description": "Professional image editing and design software."
+    },
+    {
+      "id": "msoffice",
+      "name": "Microsoft Office",
+      "version": "v365",
+      "size": "4.2GB",
+      "date": "2023-10-28",
+      "tags": ["Productivity", "Office"],
+      "description": "Suite of office applications for productivity and business."
+    },
+    {
+      "id": "davinciresolve",
+      "name": "DaVinci Resolve",
+      "version": "v18.1",
+      "size": "5.5GB",
+      "date": "2023-10-15",
+      "tags": ["Video", "Editing"],
+      "description": "Professional video editing, color correction, visual effects software."
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "version": "v3.6.2",
+      "size": "350MB",
+      "date": "2023-09-18",
+      "tags": ["3D", "Animation", "Modeling"],
+      "description": "Free and open-source 3D computer graphics software."
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "version": "v118.0",
+      "size": "100MB",
+      "date": "2023-11-08",
+      "tags": ["Browser", "Internet"],
+      "description": "Fast, secure, and free web browser from Google."
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "version": "v0.0.378",
+      "size": "160MB",
+      "date": "2023-10-30",
+      "tags": ["Communication", "Social"],
+      "description": "Voice, video and text communication service."
+    },
+    {
+      "id": "7zip",
+      "name": "7-Zip",
+      "version": "v23.01",
+      "size": "5MB",
+      "date": "2023-08-15",
+      "tags": ["Utility", "Compression"],
+      "description": "File archiver with a high compression ratio."
+    }
+  ]
+}

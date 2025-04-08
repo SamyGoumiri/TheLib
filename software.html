@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="js/error-handler.js"></script>
 </head>
 <body>
     <div class="sidebar" role="navigation" aria-label="Main navigation">
@@ -21,9 +22,9 @@
                 <i class="fas fa-gamepad menu-icon"></i>
                 <span>Games</span>
             </a></li>
-            <li><a href="softwares.html">
+            <li><a href="software.html">
                 <i class="fas fa-laptop-code menu-icon"></i>
-                <span>Softwares</span>
+                <span>Software</span>
             </a></li>
             <li><a href="streaming.html">
                 <i class="fas fa-play-circle menu-icon"></i>
@@ -45,25 +46,28 @@
                 <i class="fas fa-search"></i>
             </div>
             <input type="text" id="search-input" class="search-input" 
-                   placeholder="Search software..." onkeyup="searchItems()">
+                   placeholder="Search software..." aria-label="Search for software">
         </div>
 
-        <div class="card-grid">
-            <div class="software-card">
-                <div class="software-image">
-                    <i class="fas fa-cube"></i>
-                    <div class="software-overlay">
-                        <span class="tag">Utility</span>
-                        <span class="version">v1.0.0</span>
-                    </div>
-                </div>
-                <div class="title-overlay">
-                    <h3>Software 1</h3>
-                </div>
+        <div class="items-list software-list">
+            <div class="list-header">
+                <div class="list-column name-column">Name</div>
+                <div class="list-column version-column">Version</div>
+                <div class="list-column size-column">Size</div>
+                <div class="list-column date-column">Last Updated</div>
+                <div class="list-column actions-column">Actions</div>
+            </div>
+            <!-- Data will be loaded dynamically -->
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-pulse"></i>
+                <span>Loading software...</span>
             </div>
         </div>
     </div>
-    <script src="js/search.js" defer></script>
+    <script src="js/app.js" defer></script>
     <script src="js/modal.js" defer></script>
+    <script src="js/data-loader.js" defer></script>
+    <script src="js/animation-utils.js" defer></script>
+    <script src="js/search.js" defer></script>
 </body>
 </html>

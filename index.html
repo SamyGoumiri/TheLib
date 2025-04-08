@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="js/error-handler.js"></script>
 </head>
 <body>
     <div class="sidebar" role="navigation" aria-label="Main navigation">
@@ -21,9 +22,9 @@
                 <i class="fas fa-gamepad menu-icon" aria-hidden="true"></i>
                 <span>Games</span>
             </a></li>
-            <li><a href="softwares.html">
+            <li><a href="software.html">
                 <i class="fas fa-laptop-code menu-icon" aria-hidden="true"></i>
-                <span>Softwares</span>
+                <span>Software</span>
             </a></li>
             <li><a href="streaming.html">
                 <i class="fas fa-play-circle menu-icon" aria-hidden="true"></i>
@@ -36,29 +37,89 @@
                 <span>Settings</span>
             </a>
         </div>
-        <div class="auth-buttons">
-            <a href="login.html" id="loginBtn" class="auth-btn">
-                <i class="fas fa-sign-in-alt"></i> Login
-            </a>
-            <a href="#" id="logoutBtn" class="auth-btn" style="display: none;">
-                <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-        </div>
     </div>
     <div class="content">
         <h1><i class="fas fa-home"></i> Welcome to THE LIB</h1>
-        <p>Your ultimate repository for games, software, and streaming resources.</p>
+        
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h2>Your Central Resource Hub</h2>
+                <p>THE LIB provides a streamlined way to discover and download games, software, and access streaming services all in one place.</p>
+                <p>Use the navigation menu on the left to access the different sections of the site.</p>
+            </div>
+            
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <i class="fas fa-gamepad"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">124</span>
+                        <span class="stat-label">Games Available</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">86</span>
+                        <span class="stat-label">Software Packages</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-download"></i>
+                    <div class="stat-info">
+                        <span class="stat-number">28K+</span>
+                        <span class="stat-label">Total Downloads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-links">
+            <a href="games.html" class="quick-link">
+                <i class="fas fa-gamepad"></i>
+                <span>Browse Games</span>
+            </a>
+            <a href="software.html" class="quick-link">
+                <i class="fas fa-laptop-code"></i>
+                <span>View Software</span>
+            </a>
+            <a href="streaming.html" class="quick-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Access Streaming</span>
+            </a>
+            <a href="settings.html" class="quick-link">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
     </div>
-    <script src="js/auth.js" type="module" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/animation-utils.js" defer></script>
     <script>
-        // Vérifier si l'utilisateur est connecté
-        document.addEventListener('DOMContentLoaded', () => {
-            const user = sessionStorage.getItem('currentUser');
-            if (user) {
-                document.getElementById('loginBtn').style.display = 'none';
-                document.getElementById('logoutBtn').style.display = 'block';
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const gamesResponse = await fetch('data/games.json');
+            const softwareResponse = await fetch('data/software.json');
+            
+            if (gamesResponse.ok && softwareResponse.ok) {
+                const gamesData = await gamesResponse.json();
+                const softwareData = await softwareResponse.json();
+                
+                // Update stats counts
+                const gameCountElement = document.querySelector('.stat-item:nth-child(1) .stat-number');
+                const softwareCountElement = document.querySelector('.stat-item:nth-child(2) .stat-number');
+                
+                if (gameCountElement && gamesData.games) {
+                    gameCountElement.textContent = gamesData.games.length;
+                }
+                
+                if (softwareCountElement && softwareData.software) {
+                    softwareCountElement.textContent = softwareData.software.length;
+                }
             }
-        });
+        } catch (error) {
+            console.error('Error loading data for stats:', error);
+        }
+    });
     </script>
 </body>
 </html>

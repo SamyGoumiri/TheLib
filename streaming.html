@@ -18,7 +18,7 @@
         </a>
         <ul>
             <li><a href="games.html"><i class="fas fa-gamepad menu-icon"></i><span>Games</span></a></li>
-            <li><a href="softwares.html"><i class="fas fa-laptop-code menu-icon"></i><span>Softwares</span></a></li>
+            <li><a href="software.html"><i class="fas fa-laptop-code menu-icon"></i><span>Software</span></a></li>
             <li><a href="streaming.html"><i class="fas fa-play-circle menu-icon"></i><span>Streaming</span></a></li>
         </ul>
         <div class="settings-link">
@@ -36,28 +36,75 @@
                 <i class="fas fa-search menu-icon" aria-hidden="true"></i>
             </div>
             <input type="text" id="search-input" class="search-input" 
-                   placeholder="Search streaming services..." aria-label="Search streaming services" onkeyup="searchItems()">
+                   placeholder="Search streaming services..." aria-label="Search streaming services">
         </div>
 
         <table>
-            <tr>
-                <th>Service</th>
-                <th>Category</th>
-                <th>Type</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td>Service 1</td>
-                <td><span class="tag">Movies</span></td>
-                <td>VOD</td>
-                <td>
-                    <a href="#" class="download-link">
-                        <i class="fas fa-external-link-alt"></i> Access
-                    </a>
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Netflix</td>
+                    <td><span class="tag">Movies & TV</span></td>
+                    <td>VOD</td>
+                    <td>
+                        <a href="https://www.netflix.com" target="_blank" rel="noopener noreferrer" class="download-link">
+                            <i class="fas fa-external-link-alt"></i> Access
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Disney+</td>
+                    <td><span class="tag">Movies & TV</span></td>
+                    <td>VOD</td>
+                    <td>
+                        <a href="https://www.disneyplus.com" target="_blank" rel="noopener noreferrer" class="download-link">
+                            <i class="fas fa-external-link-alt"></i> Access
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spotify</td>
+                    <td><span class="tag">Music</span></td>
+                    <td>Audio</td>
+                    <td>
+                        <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer" class="download-link">
+                            <i class="fas fa-external-link-alt"></i> Access
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Twitch</td>
+                    <td><span class="tag">Gaming</span></td>
+                    <td>Live</td>
+                    <td>
+                        <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer" class="download-link">
+                            <i class="fas fa-external-link-alt"></i> Access
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>YouTube</td>
+                    <td><span class="tag">Mixed Content</span></td>
+                    <td>Mixed</td>
+                    <td>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="download-link">
+                            <i class="fas fa-external-link-alt"></i> Access
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
+    <script src="js/app.js" defer></script>
+    <script src="js/utils.js" defer></script>
     <script src="js/search.js" defer></script>
+    <script src="js/animation-utils.js" defer></script>
 </body>
 </html>

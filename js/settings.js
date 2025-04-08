@@ -2,26 +2,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeSelect = document.getElementById('theme-select');
     const langSelect = document.getElementById('language-select');
 
-    if (!themeSelect || !langSelect) return;
+    // Theme settings
+    if (themeSelect) {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.body.className = savedTheme;
+        themeSelect.value = savedTheme;
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    const savedLang = localStorage.getItem('language') || 'en';
+        themeSelect.addEventListener('change', () => {
+            const theme = themeSelect.value;
+            document.body.className = theme;
+            localStorage.setItem('theme', theme);
+            
+            // Show success message
+            showNotification('Theme updated successfully');
+        });
+    }
 
-    document.body.className = savedTheme;
-    themeSelect.value = savedTheme;
-    langSelect.value = savedLang;
+    // Language settings
+    if (langSelect) {
+        const savedLang = localStorage.getItem('language') || 'en';
+        langSelect.value = savedLang;
 
-    const handleThemeChange = () => {
-        const theme = themeSelect.value;
-        document.body.className = theme;
-        localStorage.setItem('theme', theme);
-    };
-
-    const handleLangChange = () => {
-        const lang = langSelect.value;
-        localStorage.setItem('language', lang);
-    };
-
-    themeSelect.addEventListener('change', handleThemeChange);
-    langSelect.addEventListener('change', handleLangChange);
+        langSelect.addEventListener('change', () => {
+            const lang = langSelect.value;
+            localStorage.setItem('language', lang);
+            
+            // Show success message
+            showNotification('Language preference saved');
+        });
+    }
 });
+
+// Remove duplicate showNotification function as it's now in utils.js
